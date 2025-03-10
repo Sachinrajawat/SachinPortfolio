@@ -1,0 +1,331 @@
+/* src/styles/Contact.css */
+#contact {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d3436 100%);
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  background-size: 200% 200%;
+  animation: gradientBG 15s ease infinite;
+  padding: 2rem 1rem;
+}
+
+.section-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 4rem;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-weight: 700;
+  background: linear-gradient(45deg, #efe706, #ed0909);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientText 8s ease infinite;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Contact Info Styles */
+.contact-info {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-details .info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.contact-details .info-item:hover {
+  transform: translateX(10px);
+  border-color: #a7ff64;
+}
+
+.info-item i {
+  color: #3944df;
+  font-size: 1.5rem;
+  min-width: 40px;
+  text-align: center;
+}
+
+.info-item h3 {
+  margin: 0 0 0.5rem 0;
+  color: #646eff;
+  font-size: 1.1rem;
+}
+
+.info-item p {
+  margin: 0;
+  color: rgba(203, 228, 214, 0.7);
+}
+
+/* Connect Section */
+.connect-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.connect-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.connect-links a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64ffda;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.connect-links a:hover {
+  background: rgba(100, 255, 218, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+}
+
+/* Contact Form Styles */
+.contact-form {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #faff64;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #64ffda;
+  box-shadow: 0 0 0 2px rgba(100, 255, 218, 0.3);
+}
+
+.send-button {
+  background: rgba(100, 255, 218, 0.1);
+  color: #64ffda;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  justify-content: center;
+}
+
+.send-button:hover {
+  background: rgba(100, 255, 218, 0.2);
+  color: white;
+}
+
+/* Social Links with Custom Colors */
+.connect-links .social-link {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--social-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.connect-links .social-link:hover {
+  background: var(--social-hover-color);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Copyright Section */
+.copyright-section {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .section-title {
+    font-size: 3rem;
+    letter-spacing: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  #contact {
+    padding: 1rem 0.5rem;
+  }
+
+  .section-container {
+    padding: 0 0.5rem;
+  }
+
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 1rem !important;
+  }
+
+  .connect-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .connect-links a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.6rem;
+  }
+
+  .send-button {
+    padding: 0.8rem 1.5rem;
+  }
+
+  .copyright-section {
+    font-size: 0.7rem;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .contact-wrapper {
+    gap: 0.5rem;
+  }
+
+  .info-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-item i {
+    margin-bottom: 0.5rem;
+  }
+
+  .connect-links {
+    gap: 0.5rem;
+  }
+
+  .connect-links a {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Animations */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes gradientText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+/* Global Copyright Section */
+.global-copyright-section {
+  background: rgba(13, 17, 23, 0.95);
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .global-copyright-section {
+    font-size: 0.7rem;
+    padding: 1rem;
+  }
+}

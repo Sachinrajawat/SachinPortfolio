@@ -1,0 +1,230 @@
+/* src/styles/Navbar.css */
+.navbar {
+  padding: 0.8rem;
+  background: rgba(13, 17, 23, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.container {
+  padding-left: 0; /* Reduces left padding of container */
+}
+
+/* Brand/Logo styles */
+.navbar-brand {
+  margin-left: -15px; /* Moves SACHIN more to the left */
+  padding-left: 0;
+}
+
+.brand-text {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e4f410;
+  display: flex;
+  gap: 2px;
+}
+
+.brand-text span {
+  display: inline-block;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.brand-text span:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.brand-text span::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #64ffda;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.brand-text span:hover::after {
+  transform: scaleX(1);
+}
+
+/* Navigation styles */
+.navbar-nav {
+  gap: 0.5rem;
+}
+
+.nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  padding: 0.5rem 0.8rem !important;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.link-icon {
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #64ffda !important;
+  background: rgba(100, 255, 218, 0.1);
+}
+
+.nav-link:hover .link-icon {
+  transform: scale(1.1);
+}
+
+.nav-link.active {
+  color: #64ffda !important;
+  background: rgba(100, 255, 218, 0.15);
+}
+
+/* Hamburger menu */
+.hamburger {
+  width: 24px;
+  height: 18px;
+  position: relative;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #64ffda;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger span:first-child {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 8px;
+}
+
+.hamburger span:last-child {
+  top: 16px;
+}
+
+.hamburger.active span:first-child {
+  transform: rotate(45deg);
+  top: 8px;
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:last-child {
+  transform: rotate(-45deg);
+  top: 8px;
+}
+
+/* Mobile styles */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(13, 17, 23, 0.98);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+  }
+
+  .navbar-nav {
+    gap: 0.3rem;
+  }
+
+  .nav-link {
+    padding: 0.6rem 1rem !important;
+  }
+
+  .nav-link:hover {
+    transform: translateX(5px);
+  }
+
+  .navbar-brand {
+    margin-left: 0; /* Reset margin for mobile */
+  }
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-collapse.show {
+  animation: slideIn 0.3s ease forwards;
+}
+
+/* Scrollbar */
+.navbar-collapse {
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.navbar-collapse::-webkit-scrollbar {
+  width: 4px;
+}
+
+.navbar-collapse::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-collapse::-webkit-scrollbar-thumb {
+  background: #64ffda;
+  border-radius: 4px;
+}
+
+/* Additional hover effect for brand */
+.navbar-brand:hover .brand-text span {
+  animation: wave 0.3s ease forwards;
+}
+
+@keyframes wave {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Gradient background animation */
+.navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(100, 255, 218, 0.1),
+    rgba(13, 17, 23, 0.1),
+    rgba(100, 255, 218, 0.1)
+  );
+  background-size: 200% 200%;
+  animation: gradientBG 15s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
