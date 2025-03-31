@@ -48,7 +48,7 @@ function Projects() {
       ],
       image: chat,
       links: {
-        github: "#",
+        github: "https://github.com/Sachinrajawat/TalkHub",
         live: "#"
       }
     },
