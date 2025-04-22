@@ -42,16 +42,16 @@ function CodingProfiles() {
       platform: "LeetCode",
       username: "sachinrajawat38",
       stats: [
-        { label: "Problems Solved", value: "500+" },
-        { label: "Contest Rating", value: "1635" }
+        { label: "Problems Solved", value: "600+" },
+        { label: "Contest Rating", value: "1786" }
       ],
       icon: "fas fa-code",
       link: "https://leetcode.com/u/sachinrajawat38/",
       color: "#FFA116",
       gradient: "linear-gradient(135deg, #FFA116 0%, #FF6B6B 100%)",
       ratingData: {
-        labels: ['Jun24', 'Jul24', 'Aug24', 'Sep24', 'Oct24', 'Nov24', 'Dec24', 'Jan25', 'Feb25', 'Mar25'],
-        ratings: [1409, 1416, 1494, 1541, 1515, 1535, 1538, 1576, 1625, 1635]
+        labels: ['Jun24', 'Jul24', 'Aug24', 'Sep24', 'Oct24', 'Nov24', 'Dec24', 'Jan25', 'Feb25', 'Mar25','Apr25'],
+        ratings: [1409, 1416, 1494, 1541, 1515, 1535, 1538, 1576, 1625, 1786, 1751]
       }
     },
     {
@@ -66,8 +66,8 @@ function CodingProfiles() {
       color: "#1F8ACB",
       gradient: "linear-gradient(135deg, #1F8ACB 0%, #4A90E2 100%)",
       ratingData: {
-        labels: ['Sep24', 'Oct24', 'Nov24', 'Dec24', 'Jan25', 'Feb25', 'Mar25'],
-        ratings: [615, 700, 737, 778, 824, 909, 921]
+        labels: ['Sep24', 'Oct24', 'Nov24', 'Dec24', 'Jan25', 'Feb25', 'Mar25', 'Apr25'],
+        ratings: [615, 700, 737, 778, 824, 909, 1066, 1070]
       }
     },
     {
@@ -83,7 +83,7 @@ function CodingProfiles() {
       gradient: "linear-gradient(135deg, #FFB800 0%, #FFDA33 100%)", 
       ratingData: {
         labels: ['Sep24', 'Oct24', 'Nov24', 'Dec24', 'Jan25', 'Feb25', 'Mar25'],
-        ratings: [1377, 1472, 1445, 1398, 1132, 1275, 1333]
+        ratings: [1377, 1472, 1445, 1398, 1132, 1275, 1405]
       }
     },
     {

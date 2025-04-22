@@ -7,6 +7,8 @@ import devopsCert from '../assets/devops.png';
 import supervisedCert from '../assets/supervised.png';
 import cloudComputingCert from '../assets/cloudComputing.png';
 import dynamicProgrammingCert from '../assets/dynamicProgramming.png';
+import coreandjava from '../assets/board.png';
+
 
 function Certificates() {
   const [hoveredCert, setHoveredCert] = useState(null);
@@ -46,6 +48,15 @@ function Certificates() {
       icon: "fas fa-code",
       link: "https://www.coursera.org/account/accomplishments/verify/V524QDDBFXE7",
       image: dynamicProgrammingCert,
+      color: "#FF9F1C" // Bright Orange
+    },
+    {
+      title: "Core and Advance Java",
+      issuer: "Board Infinity",
+      date: "June 2024",
+      icon: "fas fa-code",
+      link: "https://www.coursera.org/account/accomplishments/verify/V524QDDBFXE7",
+      image: coreandjava,
       color: "#FF9F1C" // Bright Orange
     }
   ];
