@@ -1,0 +1,366 @@
+/* Experience.css */
+#experience {
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  background-size: 200% 200%;
+  animation: gradientBG 18s ease infinite;
+  padding: 4rem 0;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#experience .section-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+}
+
+#experience .section-title {
+  text-align: center;
+  font-size: 4.5rem;
+  margin-bottom: 4rem;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-weight: 700;
+  background: linear-gradient(45deg, #00BCD4, #FF9100);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#experience .section-title::before {
+  content: 'EXPERIENCE';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.03);
+  white-space: nowrap;
+  z-index: -1;
+  letter-spacing: 15px;
+}
+
+#experience .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 5px;
+  background: linear-gradient(45deg, #00BCD4, #FF9100);
+  border-radius: 2px;
+  box-shadow:
+    0 0 10px rgba(0, 188, 212, 0.5),
+    0 0 20px rgba(0, 188, 212, 0.3);
+}
+
+/* Timeline container with vertical line */
+.experience-timeline {
+  position: relative;
+  padding: 1rem 0;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 32px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 255, 255, 0.15) 8%,
+    rgba(255, 255, 255, 0.15) 92%,
+    transparent 100%
+  );
+}
+
+/* Experience card */
+.experience-card {
+  position: relative;
+  padding-left: 100px;
+  margin-bottom: 3rem;
+}
+
+.experience-card:last-child {
+  margin-bottom: 0;
+}
+
+/* The icon dot on the timeline */
+.experience-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 65px;
+  height: 65px;
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    rgba(255, 255, 255, 0.05)
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: #fff;
+  box-shadow:
+    0 0 0 4px rgba(15, 32, 39, 0.95),
+    0 8px 24px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(0, 188, 212, 0.15);
+  z-index: 2;
+}
+
+/* Card body */
+.experience-content {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.75rem 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.experience-content::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 25px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid rgba(255, 255, 255, 0.04);
+}
+
+.experience-card:hover .experience-content {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: var(--accent-color);
+  transform: translateX(6px);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.3),
+    0 0 0 1px var(--accent-color);
+}
+
+/* Header (company + role + meta) */
+.experience-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.experience-title-block {
+  flex: 1;
+  min-width: 250px;
+}
+
+.company-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.4rem 0;
+  letter-spacing: 0.3px;
+}
+
+.role-name {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  font-style: italic;
+}
+
+.experience-type {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  background: var(--accent-color);
+  color: #0f2027;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-style: normal;
+}
+
+.experience-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-align: right;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.experience-meta .duration,
+.experience-meta .location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  justify-content: flex-end;
+}
+
+.experience-meta i {
+  color: var(--accent-color);
+  font-size: 0.9rem;
+}
+
+/* Responsibility bullets */
+.responsibilities {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem 0;
+}
+
+.responsibilities li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.7rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.responsibilities li:last-child {
+  margin-bottom: 0;
+}
+
+.responsibilities li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent-color);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* Tech pills */
+.experience-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tech-pill {
+  font-size: 0.78rem;
+  padding: 0.3rem 0.85rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: all 0.25s ease;
+}
+
+.tech-pill:hover {
+  background: var(--accent-color);
+  color: #0f2027;
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+/* Scroll indicator (matches other sections) */
+#experience .scroll-indicator {
+  position: relative;
+  margin: 4rem auto 0;
+  width: 30px;
+  cursor: pointer;
+  text-align: center;
+}
+
+#experience .mouse {
+  width: 24px;
+  height: 38px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 14px;
+  position: relative;
+  margin: 0 auto;
+}
+
+#experience .mouse .wheel {
+  width: 3px;
+  height: 8px;
+  background: #fff;
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  animation: scrollWheel 1.6s ease-in-out infinite;
+}
+
+@keyframes scrollWheel {
+  0% { transform: translate(-50%, 0); opacity: 1; }
+  100% { transform: translate(-50%, 14px); opacity: 0; }
+}
+
+#experience .arrow {
+  margin-top: 6px;
+}
+
+#experience .arrow span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  border-right: 2px solid rgba(255, 255, 255, 0.5);
+  transform: rotate(45deg);
+  margin: -3px auto;
+  animation: arrowDown 1.6s ease-in-out infinite;
+}
+
+#experience .arrow span:nth-child(2) { animation-delay: 0.2s; }
+#experience .arrow span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes arrowDown {
+  0% { opacity: 0; transform: rotate(45deg) translate(-5px, -5px); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: rotate(45deg) translate(5px, 5px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #experience .section-title { font-size: 2.8rem; letter-spacing: 4px; }
+  #experience .section-title::before { font-size: 4.5rem; letter-spacing: 8px; }
+
+  .experience-timeline::before { left: 22px; }
+  .experience-card { padding-left: 70px; }
+  .experience-icon { width: 48px; height: 48px; font-size: 1.2rem; }
+
+  .experience-content { padding: 1.25rem 1.25rem; }
+  .experience-content::before { display: none; }
+
+  .experience-header { flex-direction: column; }
+  .experience-meta { text-align: left; }
+  .experience-meta .duration,
+  .experience-meta .location { justify-content: flex-start; }
+
+  .company-name { font-size: 1.2rem; }
+  .role-name { font-size: 0.85rem; }
+  .responsibilities li { font-size: 0.88rem; }
+}

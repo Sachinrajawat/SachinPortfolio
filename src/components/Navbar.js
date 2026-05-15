@@ -78,6 +78,7 @@ function Navbar() {
             {[
               { id: 'home', label: 'Home', icon: '🏠' },
               { id: 'about', label: 'Education', icon: '🎓' },
+              { id: 'experience', label: 'Experience', icon: '💼' },
               { id: 'skills', label: 'Skills', icon: '⚡' },
               { id: 'projects', label: 'Projects', icon: '💻' },
               { id: 'coding-profiles', label: 'Coding Profiles', icon: '👨‍💻' },
