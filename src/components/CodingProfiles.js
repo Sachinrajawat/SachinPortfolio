@@ -42,7 +42,7 @@ function CodingProfiles() {
       platform: "LeetCode",
       username: "sachinrajawat38",
       stats: [
-        { label: "Problems Solved", value: "600+" },
+        { label: "Problems Solved", value: "800+" },
         { label: "Contest Rating", value: "1786" }
       ],
       icon: "fas fa-code",
@@ -58,8 +58,8 @@ function CodingProfiles() {
       platform: "CodeForces",
       username: "sachinrajawat38",
       stats: [
-        { label: "Contest Rating", value: "929" },
-        { label: "Rank", value: "Newbie" }
+        { label: "Max Rating", value: "1071" },
+        { label: "Status", value: "Active" }
       ],
       icon: "fas fa-terminal",
       link: "https://codeforces.com/profile/sachinrajawat38",
@@ -67,7 +67,7 @@ function CodingProfiles() {
       gradient: "linear-gradient(135deg, #1F8ACB 0%, #4A90E2 100%)",
       ratingData: {
         labels: ['Sep24', 'Oct24', 'Nov24', 'Dec24', 'Jan25', 'Feb25', 'Mar25', 'Apr25'],
-        ratings: [615, 700, 737, 778, 824, 909, 1066, 1070]
+        ratings: [615, 700, 737, 778, 824, 909, 1066, 1071]
       }
     },
     {

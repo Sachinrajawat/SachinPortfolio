@@ -3,6 +3,7 @@ import '../styles/Certificates.css';
 import { motion } from 'framer-motion';
 
 // Import certificate images
+import microsoftFabricCert from '../assets/microsoft-fabric.png';
 import devopsCert from '../assets/devops.png';
 import supervisedCert from '../assets/supervised.png';
 import cloudComputingCert from '../assets/cloudComputing.png';
@@ -14,6 +15,15 @@ function Certificates() {
   const [hoveredCert, setHoveredCert] = useState(null);
 
   const certificates = [
+    {
+      title: "Microsoft Certified: Fabric Analytics Engineer Associate (DP-600)",
+      issuer: "Microsoft",
+      date: "April 2026",
+      icon: "fas fa-certificate",
+      link: "https://learn.microsoft.com/en-us/users/sachinsinghrajawatmaqsoftware-7074/transcript/d9533tgr5x6z0p3",
+      image: microsoftFabricCert,
+      color: "#0078D4" // Microsoft Blue
+    },
     {
       title: "DevOps and Software Engineering",
       issuer: "Coursera",

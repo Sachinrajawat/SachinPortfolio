@@ -9,7 +9,7 @@ function About() {
       institution: "Lovely Professional University",
       location: "Jalandhar, Punjab",
       duration: "2022 - 2026",
-      score: "CGPA: 8.19"
+      score: "CGPA: 8.19/10"
     },
     {
       degree: "Class XII",
