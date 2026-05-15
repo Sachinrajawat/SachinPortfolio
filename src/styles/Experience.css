@@ -1,12 +1,12 @@
-/* Experience.css */
+/* Experience.css - matches the section style of About/Skills/Projects */
 #experience {
   min-height: calc(100vh - 70px);
-  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d3436 100%);
   position: relative;
   overflow: hidden;
   color: #ffffff;
   background-size: 200% 200%;
-  animation: gradientBG 18s ease infinite;
+  animation: gradientBG 15s ease infinite;
   padding: 4rem 0;
 }
 
@@ -31,7 +31,7 @@
   text-transform: uppercase;
   letter-spacing: 8px;
   font-weight: 700;
-  background: linear-gradient(45deg, #00BCD4, #FF9100);
+  background: linear-gradient(45deg, #64ffda, #48d1cc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -57,11 +57,12 @@
   transform: translateX(-50%);
   width: 200px;
   height: 5px;
-  background: linear-gradient(45deg, #00BCD4, #FF9100);
+  background: linear-gradient(45deg, #64ffda, #48d1cc);
   border-radius: 2px;
   box-shadow:
-    0 0 10px rgba(0, 188, 212, 0.5),
-    0 0 20px rgba(0, 188, 212, 0.3);
+    0 0 10px rgba(100, 255, 218, 0.5),
+    0 0 20px rgba(100, 255, 218, 0.3),
+    0 0 30px rgba(100, 255, 218, 0.1);
 }
 
 /* Timeline container with vertical line */
@@ -116,9 +117,9 @@
   font-size: 1.6rem;
   color: #fff;
   box-shadow:
-    0 0 0 4px rgba(15, 32, 39, 0.95),
+    0 0 0 4px #1a1a1a,
     0 8px 24px rgba(0, 0, 0, 0.4),
-    0 0 30px rgba(0, 188, 212, 0.15);
+    0 0 30px rgba(100, 255, 218, 0.1);
   z-index: 2;
 }
 
@@ -183,23 +184,8 @@
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.75);
   margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.6rem;
   font-style: italic;
-}
-
-.experience-type {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-weight: 600;
-  background: var(--accent-color);
-  color: #0f2027;
-  padding: 0.2rem 0.6rem;
-  border-radius: 12px;
-  font-style: normal;
+  letter-spacing: 0.2px;
 }
 
 .experience-meta {
@@ -279,7 +265,7 @@
 
 .tech-pill:hover {
   background: var(--accent-color);
-  color: #0f2027;
+  color: #1a1a1a;
   border-color: var(--accent-color);
   transform: translateY(-2px);
 }

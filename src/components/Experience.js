@@ -7,8 +7,7 @@ function Experience() {
   const experiences = [
     {
       company: "MAQ Software",
-      role: "Associate Software Engineer Intern",
-      type: "Internship",
+      role: "Associate Software Engineer",
       location: "Noida, Uttar Pradesh",
       duration: "May 2025 – May 2026",
       icon: "fas fa-building",
@@ -22,12 +21,11 @@ function Experience() {
     },
     {
       company: "Outlier",
-      role: "AI Data Specialist, Freelance",
-      type: "Remote",
+      role: "AI Data Specialist",
       location: "Remote",
       duration: "Sept 2024 – Jan 2025",
       icon: "fas fa-robot",
-      color: "#00BCD4",
+      color: "#64ffda",
       responsibilities: [
         "Designed 200+ evaluation prompts across coding, math, and reasoning domains to assess large language model performance and instruction-following capability",
         "Ranked 400+ model-generated responses across multiple model versions, improving post-training data quality through structured feedback aligned with RLHF evaluation workflows"
@@ -75,10 +73,7 @@ function Experience() {
                 <div className="experience-header">
                   <div className="experience-title-block">
                     <h3 className="company-name">{exp.company}</h3>
-                    <p className="role-name">
-                      {exp.role}
-                      <span className="experience-type">{exp.type}</span>
-                    </p>
+                    <p className="role-name">{exp.role}</p>
                   </div>
                   <div className="experience-meta">
                     <span className="duration">
