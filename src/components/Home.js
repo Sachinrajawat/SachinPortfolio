@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react';
-import Typed from 'typed.js';
-import '../styles/Home.css';
-import sachin from '../assets/sachin.jpeg';
-import SachinCV from '../assets/SachinCV.pdf';
+import React, { useEffect, useRef } from "react";
+import Typed from "typed.js";
+import "../styles/Home.css";
+import sachin from "../assets/sachin.jpeg";
+import SachinCV from "../assets/SachinCV.pdf";
 
 function Home() {
   const typedRef = useRef(null);
@@ -10,14 +10,14 @@ function Home() {
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
       strings: [
-        'Full Stack Developer',
-        'MERN Stack Developer',
-        'Web Developer'
+        "Full Stack Developer",
+        "MERN Stack Developer",
+        "Web Developer",
       ],
       typeSpeed: 50,
       backSpeed: 30,
       backDelay: 1500,
-      loop: true
+      loop: true,
     });
 
     return () => {
@@ -26,8 +26,8 @@ function Home() {
   }, []);
 
   const handleScrollClick = () => {
-    const projectsSection = document.getElementById('about');
-    projectsSection.scrollIntoView({ behavior: 'smooth' });
+    const projectsSection = document.getElementById("about");
+    projectsSection.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -35,18 +35,27 @@ function Home() {
       <div className="section-container">
         <div className="home-content">
           <div className="profile-container">
-            <img src={sachin} alt="Sachin Singh Rajawat" className="profile-image" />
+            <img
+              src={sachin}
+              alt="Sachin Singh Rajawat"
+              className="profile-image"
+            />
           </div>
           <div className="home-text">
             <h1 className="main-title">
-              Hi, I'm <span className="highlight rainbow-text">Sachin Singh Rajawat</span>
+              Hi, I'm{" "}
+              <span className="highlight rainbow-text">
+                Sachin Singh Rajawat
+              </span>
             </h1>
             <div className="typing-container">
               I'm a <span ref={typedRef} className="highlight"></span>
             </div>
             <p className="description">
-              A passionate developer and Computer Science student at Lovely Professional University,
-              specializing in creating comprehensive web solutions with expertise in MERN Stack development.
+              Software Engineer with a year of industry experience at MAQ
+              Software, building full-stack MERN applications with secure auth,
+              real-time features, and AI integrations. B.Tech CSE graduate from
+              Lovely Professional University.
             </p>
           </div>
 
@@ -62,44 +71,44 @@ function Home() {
               </a>
             </div>
 
-            <a 
-              href={SachinCV} 
+            <a
+              href={SachinCV}
               className="resume-button"
               download="SachinCV.pdf"
             >
-            Download CV
-            <i className="fas fa-download ms-2"></i>
-          </a>
+              Download CV
+              <i className="fas fa-download ms-2"></i>
+            </a>
           </div>
 
           <div className="social-links">
-            <a 
-              href="https://github.com/Sachinrajawat" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://github.com/Sachinrajawat"
+              target="_blank"
+              rel="noopener noreferrer"
               title="GitHub"
               className="social-link github"
             >
               <i className="fab fa-github"></i>
             </a>
-            <a 
-              href="https://www.linkedin.com/in/sachin-singh-rajawat" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://www.linkedin.com/in/sachin-singh-rajawat"
+              target="_blank"
+              rel="noopener noreferrer"
               title="LinkedIn"
               className="social-link linkedin"
             >
               <i className="fab fa-linkedin"></i>
             </a>
-            <a 
-              href="mailto:sachinrajawat38@gmail.com" 
+            <a
+              href="mailto:sachinrajawat38@gmail.com"
               title="Email"
               className="social-link email"
             >
               <i className="fas fa-envelope"></i>
             </a>
-            <a 
-              href="tel:+919826161346" 
+            <a
+              href="tel:+919826161346"
               title="Phone"
               className="social-link phone"
             >
@@ -109,10 +118,10 @@ function Home() {
         </div>
       </div>
 
-      <div 
-        className="scroll-indicator" 
-        onClick={handleScrollClick} 
-        role="button" 
+      <div
+        className="scroll-indicator"
+        onClick={handleScrollClick}
+        role="button"
         tabIndex={0}
       >
         <div className="mouse">

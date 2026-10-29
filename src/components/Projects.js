@@ -7,11 +7,70 @@ import weather from "../assets/weather.png";
 import fixitnow from "../assets/FixItNow.png";
 import coa from "../assets/coa.png";
 import dsa from "../assets/dsa.png";
+import codearena from "../assets/codearena.png";
 
 function Projects() {
   const [activeFilter, setActiveFilter] = useState("major");
 
   const projects = [
+    {
+      title: "CodeArena - Coding Practice Platform",
+      category: "major",
+      duration: "Oct 2026",
+      description:
+        "A LeetCode-style coding practice platform with an in-browser Monaco editor, multi-language code execution via Judge0, an admin problem-publishing workflow, and an AI hint assistant.",
+      keyFeatures: [
+        "Developed a full-stack platform with React, Node.js, Express.js, and MongoDB, exposing 17 REST API endpoints and a Monaco editor to solve problems in 3 languages (C++, Java, JavaScript) via the Judge0 API",
+        "Secured the app with JWT authentication in httpOnly cookies, bcrypt hashing, role-based access control, and a Redis token blocklist for logout revocation",
+        "Rate-limited Run and Submit to 10 and 5 requests/min per user to protect the code-execution quota",
+        "Built an admin panel that verifies reference solutions in all 3 languages against every visible and hidden test case before a problem is published, and added a Google Gemini hint assistant",
+      ],
+      technologies: [
+        "React",
+        "Redux Toolkit",
+        "Tailwind CSS",
+        "DaisyUI",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Redis",
+        "JWT",
+        "Judge0 API",
+        "Gemini API",
+      ],
+      image: codearena,
+      links: {
+        github: "https://github.com/Sachinrajawat/codearena",
+        live: "https://codearena-beryl.vercel.app/",
+      },
+    },
+    {
+      title: "DSA Field Guide - Algorithm Visualizer",
+      category: "major",
+      duration: "May 2026",
+      description:
+        "An interactive algorithm visualization platform for sorting, pathfinding, and BST operations, with scrubbable step-by-step playback so learners can move forward and backward through every operation.",
+      keyFeatures: [
+        "Architected a React SPA modeling 6 algorithms (Sorting, Pathfinding, BST) as pure functions returning step snapshots, enabling scrubbable step-back/forward playback and DOM-free unit testing",
+        "Implemented Bubble Sort, Merge Sort, Quick Sort, BFS, and Dijkstra's with a hand-rolled binary min-heap, plus a recursive-backtracker maze generator and weighted-grid pathfinding",
+        "Built a race mode that runs three sorting algorithms in parallel on the same input with synchronized playback",
+        "Shipped with 14 unit tests, GitHub Actions CI, and Vercel deployment with SPA-rewrite routing",
+      ],
+      technologies: [
+        "React",
+        "JavaScript",
+        "Tailwind CSS",
+        "React Router",
+        "Vite",
+        "HTML",
+        "CSS",
+      ],
+      image: dsa,
+      links: {
+        github: "https://github.com/Sachinrajawat/dsa-field-guide",
+        live: "https://dsa-field-guide.vercel.app/",
+      },
+    },
     {
       title: "Codebase Onboarding Assistant",
       category: "major",
@@ -37,7 +96,8 @@ function Projects() {
       ],
       image: coa,
       links: {
-        github: "https://github.com/Sachinrajawat/codebase-onboarding-assistant",
+        github:
+          "https://github.com/Sachinrajawat/codebase-onboarding-assistant",
         live: "https://codebase-onboarding-assistant.vercel.app/",
       },
     },
@@ -67,49 +127,6 @@ function Projects() {
       links: {
         github: "https://github.com/Sachinrajawat/FixItNow",
         live: "https://fix-it-now-web-in9h.vercel.app/",
-      },
-    },
-    {
-      title: "DSA Field Guide - Algorithm Visualizer",
-      category: "major",
-      duration: "May 2026",
-      description:
-        "An interactive visualizer for classic algorithms — sorting, pathfinding, and tree traversals — with frame-by-frame playback so learners can step through each operation.",
-      keyFeatures: [
-        "Visualized 7+ classic algorithms including Bubble Sort, Merge Sort, Quick Sort, BFS, Dijkstra, and BST traversals with frame-by-frame playback controls",
-        "Built a side-by-side sort race that runs three sorting algorithms on the same input simultaneously to compare runtime characteristics visually",
-        "Designed a clean, editorial UI with custom typography and dot-grid texture, making algorithms feel like a quiet reference book rather than a flashy demo",
-      ],
-      technologies: ["React", "Vite", "JavaScript", "CSS"],
-      image: dsa,
-      links: {
-        github: "https://github.com/Sachinrajawat/dsa-field-guide",
-        live: "https://dsa-field-guide.vercel.app/",
-      },
-    },
-    {
-      title: "ConvoCapture AI – Smart Meeting Assistant",
-      category: "minor",
-      duration: "Feb 2025",
-      description:
-        "AI-powered meeting assistant leveraging Google's Gemini API and Web Speech for intelligent meeting management.",
-      keyFeatures: [
-        "95%+ accurate real-time transcription using Web Speech API",
-        "Automated action item extraction and key point identification",
-        "Integrated PDF generation and email sharing",
-        "Seamless calendar event creation",
-      ],
-      technologies: [
-        "HTML5",
-        "CSS3",
-        "JavaScript",
-        "Web Speech API",
-        "Google Gemini API",
-      ],
-      image: convoCapureImage,
-      links: {
-        github: "https://github.com/Sachinrajawat/Smart-Meeting-Assistant",
-        live: "https://sachinrajawat.github.io/Smart-Meeting-Assistant/",
       },
     },
     {
@@ -156,7 +173,7 @@ function Projects() {
   ];
 
   const filteredProjects = projects.filter(
-    (project) => project.category === activeFilter
+    (project) => project.category === activeFilter,
   );
 
   const handleScrollClick = () => {

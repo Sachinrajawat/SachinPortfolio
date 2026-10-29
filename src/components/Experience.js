@@ -5,7 +5,7 @@ import '../styles/Experience.css';
 
 function Experience() {
   const experiences = [
-    {
+        {
       company: "MAQ Software",
       role: "Associate Software Engineer",
       location: "Noida, Uttar Pradesh",
@@ -13,11 +13,12 @@ function Experience() {
       icon: "fas fa-building",
       color: "#FF9100",
       responsibilities: [
-        "Migrated 200+ applications to a centralized dependency management system by replacing manually pinned versions with standardized references across JVM services",
-        "Resolved build and dependency validation issues during onboarding, standardizing 7–14 libraries per application to ensure compatible and stable releases",
-        "Implemented dual write logic for a large scale configuration migration, updating schemas and protobufs, and validating changes across 8+ Premium flows in test and production environments"
+        "Upgraded Version Set, a centralized dependency management system, across 150+ GitHub repositories for a client engagement, resolving dependency conflicts and migrating a service onto it using Gradle",
+        "Developed and maintained responsive UI components for Training Hub, an internal web application tracking trainee profiles, learning tracks, projects, marks, and progress",
+        "Fixed UI issues and tested across browsers and screen sizes based on requirements and team feedback",
+        "Completed a 3–4 month structured training program in HTML, CSS, JavaScript, React.js, and Microsoft Azure through technical lectures, hands-on assignments, and show-and-tell presentations"
       ],
-      tech: ["Java", "JVM", "gRPC", "Protobuf", "Docker"]
+      tech: ["Java", "Gradle", "React", "JavaScript", "HTML", "CSS", "Microsoft Azure", "Git"]
     },
     {
       company: "Outlier",
